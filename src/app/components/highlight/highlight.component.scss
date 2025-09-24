@@ -23,7 +23,7 @@
 
         span {
             opacity: 0;
-            color: #1a1a1a;
+            color: #ccc;
             display: inline-block;
             transition:
                 color 0.3s ease-out,
@@ -45,7 +45,7 @@
             span {
                 opacity: 1;
                 &.colored {
-                    color: #ccc;
+                    color: #1a1a1a;
                 }
             }
         }
