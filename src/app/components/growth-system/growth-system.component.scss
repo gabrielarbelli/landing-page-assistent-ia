@@ -1,0 +1,201 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+.growth-system {
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+
+        &--orange {
+            color: #a66607;
+        }
+
+        &--purple {
+            color: #36039c;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.1rem;
+        max-width: 600px;
+    }
+
+    &__card {
+        background-color: #262626;
+        border-radius: 1.5rem;
+        text-align: center;
+        padding: 2rem;
+        flex: 1;
+        box-shadow: 0 2px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    &__card-title {
+        font-size: 1.875rem;
+        font-weight: 400;
+        padding: 0 0.25rem;
+        color: #fff;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    &__card-desc {
+        color: #bdbdbd;
+        font-family: 'Manrope', sans-serif;
+        font-size: 1.125rem;
+        padding: 0 0.25rem;
+    }
+
+    &__features {
+        margin-top: 2.5rem;
+        padding: 0 5rem;
+
+        .feature-btn {
+            padding: 13px 24px 13px 24px;
+            background: radial-gradient(
+                56.00000000000001% 127% at 6% -53.1%,
+                var(--Dark_300, #262626) 0%,
+                var(--Dark_400, rgb(20, 20, 20)) 100%
+            );
+            border: none;
+            border-radius: 16px;
+            padding: 0.75rem 1.5rem;
+            color: #fff;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            font-weight: 500;
+            border: 2px solid transparent;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .feature-btn__icon {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-btn__text {
+            font-size: 1.125rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+        }
+
+        .feature-btn:hover,
+        .feature-btn:focus {
+            background: radial-gradient(
+                56.00000000000001% 127% at 6% -53.1%,
+                var(--UI_Orange_300, #e89548) 0%,
+                var(--UI_Orange_600, rgb(228, 111, 3)) 100%
+            );
+            color: #18121e;
+            border-color: #18121e;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .growth-system {
+        padding: 5rem 0;
+
+        &__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        &__badge {
+            background: #18121e;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            padding: 0.5em 1.2em;
+            border-radius: 33px;
+            display: inline-block;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        &__subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        &__cards {
+            display: flex;
+            gap: 2rem;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        &__card {
+            background: #18121e;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            flex: 1 1 300px;
+            max-width: 370px;
+            min-width: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            box-shadow: 0 2px 24px #0002;
+            margin-bottom: 1rem;
+        }
+
+        &__card-title {
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        &__card-badges {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+
+            &--center {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        &__card-desc {
+            color: #bdbdbd;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        &__features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+            padding: 0 1rem;
+        }
+    }
+}

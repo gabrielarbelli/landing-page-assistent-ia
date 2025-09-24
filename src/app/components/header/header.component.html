@@ -1,0 +1,67 @@
+<!-- Header -->
+<header
+    class="topbar d-flex justify-content-center"
+    appAnimateOnScroll="anim-fade-in anim-duration-quick"
+>
+    <div class="topbar__inner d-flex align-items-center gap-3">
+        <!-- Brand -->
+        <div
+            class="brand d-inline-flex align-items-center gap-2"
+            appAnimateOnScroll="anim-fade-in"
+            [animDelay]="60"
+        >
+            <span class="brand__logo" aria-hidden="true"></span>
+            <span class="brand__text">DATACORE</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="topbar__menu d-none d-md-flex align-items-center justify-content-center gap-4">
+            <a href="#" class="topbar__menu-link">Benefícios</a>
+            <a href="#" class="topbar__menu-link">Avaliações</a>
+            <a href="#" class="topbar__menu-link">Exemplos</a>
+            <a href="#" class="topbar__menu-link">Planos</a>
+        </nav>
+
+        <!-- Call to Action Button -->
+        <button
+            class="topbar__cta d-inline-flex align-items-center gap-2"
+            type="button"
+            appAnimateOnScroll="anim-fade-in"
+            [animDelay]="120"
+        >
+            <span>
+                Vamos lá!
+                <span class="topbar__cta-icon topbar__cta-icon--main" aria-hidden="true">↗</span>
+                <span class="topbar__cta-icon topbar__cta-icon--alt" aria-hidden="true">↗</span>
+            </span>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button
+            class="topbar__hamburger d-md-none"
+            [class.active]="isMenuOpen"
+            (click)="toggleMenu()"
+            aria-label="Menu"
+            type="button"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Mobile Menu Overlay -->
+        <div
+            class="topbar__overlay d-md-none"
+            [class.show]="isMenuOpen"
+            (click)="toggleMenu()"
+        ></div>
+
+        <!-- Mobile Menu -->
+        <nav class="topbar__mobile-menu d-md-none" [class.show]="isMenuOpen">
+            <a href="#" class="topbar__menu-link">Benefícios</a>
+            <a href="#" class="topbar__menu-link">Avaliações</a>
+            <a href="#" class="topbar__menu-link">Exemplos</a>
+            <a href="#" class="topbar__menu-link">Planos</a>
+        </nav>
+    </div>
+</header>

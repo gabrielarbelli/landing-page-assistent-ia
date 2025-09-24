@@ -1,0 +1,68 @@
+.assistent {
+    padding: clamp(56px, 8vw, 120px) 16px 48px;
+    position: relative;
+
+    &__title {
+        max-width: 1100px;
+        margin: 50px auto;
+        font-family: 'Outfit', sans-serif;
+
+        // Garantir que o título mantenha a opacidade
+        opacity: 1 !important;
+
+        .line {
+            font-weight: 500;
+            font-size: 71px;
+            line-height: 1.25;
+
+            &-1 {
+                color: #e87811;
+            }
+
+            &-2 {
+                color: #000;
+            }
+
+            &-3 {
+                color: #e87811;
+            }
+        }
+
+        .sparkle {
+            color: #9d6cfe;
+        }
+    }
+
+    &__subtitle {
+        color: #3d3d3d;
+        font-family: 'Manrope', 'Manrope Placeholder', sans-serif;
+        font-size: 18px;
+        margin-bottom: 1.875rem;
+    }
+
+    &__cta-btn {
+        &:hover {
+            background: radial-gradient(
+                66% 93% at 48% 0%,
+                var(--Dark_300, #262626) 0%,
+                var(--Dark_600, rgb(5, 5, 5)) 76%
+            );
+            border: 1px solid rgba(33, 33, 33, 0.93);
+            transform: translateY(-2px);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .assistent {
+        padding: 40px 16px 32px;
+
+        &__title .line {
+            font-size: 28px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+        }
+    }
+}

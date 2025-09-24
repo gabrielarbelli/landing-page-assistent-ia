@@ -1,0 +1,135 @@
+@use 'bootstrap/dist/css/bootstrap.min.css';
+@use 'styles/animations';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #e87811;
+    --gray: #6e6e6e;
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.gray {
+    color: var(--gray);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(90deg, #a66607 0%, #36039c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Componentes gerais */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 34px;
+    padding: 7px 14px;
+    border-radius: 33px;
+    background: #0f0f10;
+    color: #afafaf;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Manrope', 'Manrope Placeholder', sans-serif;
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: #7c14c7;
+        animation: dot-blink 1s infinite alternate;
+    }
+}
+
+.orange-btn {
+    padding: 15px 27px 15px 27px;
+    background: radial-gradient(
+        50% 50% at 50% 100%,
+        var(--UI_Orange_300, #e89548) /* {"name":"UI Orange 300"} */ 0%,
+        var(--UI_Orange_600, rgb(228, 111, 3)) /* {"name":"UI Orange 500"} */ 100%
+    );
+    overflow: hidden;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+    border-radius: 7px;
+    border: 0;
+    font-family: 'Manrope', 'Manrope Placeholder', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+// Animação para fade-up
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUpIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+}
+
+@keyframes fadeUpIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Animação para fade-in normal
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animações e Utilitários */
+.animated-text {
+    span {
+        display: inline-block;
+        color: white;
+        transition: color 0.5s;
+    }
+
+    &.in-view span {
+        color: yellow;
+    }
+}
+
+@keyframes dot-blink {
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+    }
+    100% {
+        opacity: 0.3;
+        box-shadow: 0 0 0 6px rgba(124, 58, 237, 0.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+}

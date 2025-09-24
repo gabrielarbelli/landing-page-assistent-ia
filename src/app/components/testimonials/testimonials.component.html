@@ -1,0 +1,30 @@
+<section class="testimonials d-flex flex-column align-items-center py-6">
+    <h2 class="title">O que nossos clientes dizem sobre nós:</h2>
+    <div class="testimonials__grid">
+        @for (testimonial of testimonials; track testimonial.name; let i = $index) {
+            <div
+                class="testimonial-card d-flex flex-column align-items-center text-center"
+                appAnimateOnScroll="anim-left anim-duration-quick"
+                [animDelay]="getDelayForIndex(i)"
+            >
+                <img
+                    [src]="testimonial.image"
+                    [alt]="'Foto de ' + testimonial.name"
+                    class="testimonial-card__avatar mb-3"
+                />
+                <div class="testimonial-card__rating mb-2 d-flex justify-content-center gap-1">
+                    @for (star of getStars(testimonial.rating); track $index) {
+                        <span class="star" aria-hidden="true">⭐</span>
+                    }
+                </div>
+                <p class="testimonial-card__text mb-3">
+                    {{ testimonial.text }}
+                </p>
+                <div class="testimonial-card__footer d-flex flex-column align-items-center gap-1">
+                    <strong class="testimonial-card__name">{{ testimonial.name }}</strong>
+                    <span class="testimonial-card__text">{{ testimonial.role }}</span>
+                </div>
+            </div>
+        }
+    </div>
+</section>

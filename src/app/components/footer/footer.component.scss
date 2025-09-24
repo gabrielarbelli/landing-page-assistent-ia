@@ -1,0 +1,38 @@
+/* Seção Footer */
+.footer {
+    background-color: #cbcbcb;
+    &__title {
+        max-width: 500px;
+        font-size: 3.5rem;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    &__desc {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__contact-link {
+        font-family: 'Manrope', 'Manrope Placeholder', sans-serif;
+        display: inline-block;
+        background: linear-gradient(90deg, #e46f03 0%, #e8c410 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 400;
+        font-size: 1.25rem;
+        text-decoration: none;
+        border: none;
+        outline: none;
+
+        span {
+            margin-left: 0.5em;
+            font-size: 1.1em;
+        }
+    }
+
+    &__copyright {
+        color: #6e6e6e;
+    }
+}

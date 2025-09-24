@@ -1,0 +1,207 @@
+.mission-block {
+    background: #0b0312;
+    padding: 3.5rem 0 2.5rem 0;
+    position: relative;
+    border-bottom: 1px solid #1a1330;
+
+    &__container {
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 2.5rem 2rem 2.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    &__logos {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        &-title {
+            font-family: 'Outfit', sans-serif;
+            display: block;
+            color: #bdbdbd;
+            font-size: 0.875rem;
+        }
+        &-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .mission-block__logo {
+            height: 32px;
+            opacity: 0.5;
+            filter: grayscale(1) brightness(1.2);
+            transition: opacity 0.2s;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        text-align: center;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__title {
+        font-family: 'Outfit', sans-serif;
+        font-size: 3.25rem;
+        font-weight: 400;
+        color: #fff;
+        margin-top: 2rem;
+        margin-bottom: 1.2rem;
+        letter-spacing: -0.01em;
+        &--orange {
+            color: #e46f03;
+        }
+        &--purple {
+            color: #9d6cfe;
+        }
+    }
+
+    &__desc {
+        color: #bdbdbd;
+        font-size: 1.05rem;
+        margin-bottom: 2.1rem;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+
+    &__cta {
+        font-family: 'Poppins', 'Poppins Placeholder', sans-serif;
+        display: inline-block;
+        background: linear-gradient(90deg, #e3c249 0%, #a269ff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 500;
+        font-size: 1.25rem;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        span {
+            margin-left: 0.5em;
+            font-size: 1.1em;
+        }
+    }
+
+    &__arrow {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 2.5rem;
+        &-icon {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            border-bottom: 3px solid #ff9900;
+            border-right: 3px solid #ff9900;
+            transform: rotate(45deg);
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+            animation: arrow-bounce 1.2s infinite alternate;
+        }
+    }
+}
+
+/* Carrossel de Logos Clientes */
+.clients-logos-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+
+    /* Fade nas bordas */
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 80px;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+    &::before {
+        left: 0;
+        background: linear-gradient(90deg, #0b0312 70%, transparent 100%);
+    }
+    &::after {
+        right: 0;
+        background: linear-gradient(-90deg, #0b0312 70%, transparent 100%);
+    }
+
+    &__track {
+        display: flex;
+        align-items: center;
+        gap: 3.5vw;
+        width: max-content;
+        animation: clients-logos-scroll 18s linear infinite;
+        will-change: transform;
+    }
+
+    &__logo {
+        height: 80px;
+        width: 330px;
+        opacity: 0.7;
+        filter: grayscale(1) brightness(1.2);
+        transition: opacity 0.2s;
+        user-select: none;
+        pointer-events: none;
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@keyframes clients-logos-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes arrow-bounce {
+    0% {
+        transform: rotate(45deg) translateY(0);
+    }
+    100% {
+        transform: rotate(45deg) translateY(12px);
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-block {
+        &__container {
+            padding: 1.2rem 0.5rem;
+        }
+        &__title {
+            font-size: 1.2rem;
+        }
+        &__logos-list {
+            gap: 1.2rem;
+        }
+        &__logo {
+            height: 22px;
+        }
+        &__arrow-icon {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .clients-logos-carousel {
+        &__logo {
+            height: 32px;
+        }
+        &__track {
+            gap: 2vw;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+<section class="experience d-flex flex-column align-items-center py-6">
+    <div class="experience__container mb-5">
+        <div
+            class="d-flex justify-content-center"
+            appAnimateOnScroll="animate-fade-up anim-duration-quick"
+        >
+            <span class="badge">Porque BotCore</span>
+        </div>
+
+        <div class="experience__header d-flex justify-content-between align-items-center mb-5">
+            <div class="row w-100 align-items-center">
+                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                    <h2
+                        class="title"
+                        appAnimateOnScroll="animate-fade-up anim-duration-quick"
+                        [animDelay]="150"
+                    >
+                        Experiência Que<br />
+                        Impulsiona A Qualidade
+                    </h2>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p
+                        class="experience__subtitle"
+                        appAnimateOnScroll="animate-fade-up anim-duration-quick"
+                        [animDelay]="300"
+                    >
+                        Com anos de experiência, oferecemos soluções de qualidade que
+                        impulsionam o sucesso e excedem os padrões do setor de forma
+                        consistente.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="experience__grid">
+            @for(card of reasonCards; track card.title; let i = $index) {
+            <div
+                class="experience-card d-flex flex-column align-items-center text-center"
+                appAnimateOnScroll="animate-fade-up anim-duration-quick"
+                [animDelay]="450 + (i * 150)"
+            >
+                <div class="experience-card__icon">
+                    <img
+                        [src]="card.iconSrc"
+                        width="100%"
+                        alt="Icone de inteligência artificial"
+                    />
+                </div>
+                <h3 class="experience-card__title">{{ card.title }}</h3>
+                <p class="experience-card__text">
+                    {{ card.text }}
+                </p>
+            </div>
+            }
+        </div>
+    </div>
+
+    <button class="orange-btn" type="button">
+        Automatizar Agora! <span aria-hidden="true">↗</span>
+    </button>
+</section>

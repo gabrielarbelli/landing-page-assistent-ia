@@ -1,0 +1,215 @@
+// Animações utilitárias inspiradas em transições do Framer
+// Referência visual: https://miraculous-hand-062656.framer.app/
+
+// Easing e tempos padrão
+$anim-duration-quick: 220ms;
+$anim-duration-base: 420ms;
+$anim-duration-slow: 640ms;
+$anim-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+$anim-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+$anim-ease-springy: cubic-bezier(0.22, 1, 0.36, 1);
+
+// Keyframes
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(24px);
+        opacity: 0.001;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-24px);
+        opacity: 0.001;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(24px);
+        opacity: 0.001;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-24px);
+        opacity: 0.001;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in {
+    from {
+        transform: scale(0.96);
+        opacity: 0.001;
+        filter: blur(2px);
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes rotate-in {
+    from {
+        transform: rotate(-2deg) scale(0.995);
+        opacity: 0.001;
+    }
+    to {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes blur-in {
+    from {
+        filter: blur(8px);
+        opacity: 0.001;
+    }
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+// Utilitários de animação
+.anim {
+    &-fade-in {
+        animation: fade-in $anim-duration-base $anim-ease-standard both;
+    }
+    &-fade-out {
+        animation: fade-out $anim-duration-base $anim-ease-standard both;
+    }
+
+    &-up {
+        animation: slide-up $anim-duration-base $anim-ease-emphasized both;
+    }
+    &-down {
+        animation: slide-down $anim-duration-base $anim-ease-emphasized both;
+    }
+    &-left {
+        animation: slide-left $anim-duration-base $anim-ease-emphasized both;
+    }
+    &-right {
+        animation: slide-right $anim-duration-base $anim-ease-emphasized both;
+    }
+
+    &-scale-in {
+        animation: scale-in $anim-duration-base $anim-ease-springy both;
+    }
+    &-rotate-in {
+        animation: rotate-in $anim-duration-quick $anim-ease-springy both;
+    }
+    &-blur-in {
+        animation: blur-in $anim-duration-base $anim-ease-standard both;
+    }
+}
+
+// Variantes de duração
+.anim-duration {
+    &-quick {
+        animation-duration: $anim-duration-quick !important;
+    }
+    &-base {
+        animation-duration: $anim-duration-base !important;
+    }
+    &-slow {
+        animation-duration: $anim-duration-slow !important;
+    }
+}
+
+// Atraso via data-attribute (data-delay="100" em ms)
+[data-delay] {
+    animation-delay: calc(attr(data-delay number, 0) * 1ms) !important;
+}
+
+// Stagger simples: aplicar em um container e usar filhos diretos
+// Ex.: <ul class="stagger-children" data-stagger="80"> <li>...</li> ...</ul>
+.stagger-children > * {
+    --_stagger: calc(attr(data-stagger number, 80) * 1ms);
+    animation-delay: calc(var(--_stagger) * (var(--index, 0))) !important;
+}
+
+// Helper para indexar via CSS sem JS (usa nth-child)
+.stagger-children {
+    > * {
+        --index: 0;
+    }
+    > *:nth-child(1) {
+        --index: 0;
+    }
+    > *:nth-child(2) {
+        --index: 1;
+    }
+    > *:nth-child(3) {
+        --index: 2;
+    }
+    > *:nth-child(4) {
+        --index: 3;
+    }
+    > *:nth-child(5) {
+        --index: 4;
+    }
+    > *:nth-child(6) {
+        --index: 5;
+    }
+    > *:nth-child(7) {
+        --index: 6;
+    }
+    > *:nth-child(8) {
+        --index: 7;
+    }
+    > *:nth-child(9) {
+        --index: 8;
+    }
+    > *:nth-child(10) {
+        --index: 9;
+    }
+}
+
+// Preferência de movimento reduzido
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 1ms !important;
+        animation-delay: 0ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 1ms !important;
+    }
+}

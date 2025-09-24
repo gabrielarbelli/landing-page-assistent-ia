@@ -1,0 +1,22 @@
+.botcore {
+    width: 100%;
+    overflow: hidden;
+    &__text {
+        width: 100vw;
+        display: block;
+        font-weight: 900;
+        font-style: italic;
+        font-family: 'Inter', sans-serif;
+        font-size: 24vw;
+        white-space: nowrap;
+        text-align: center;
+        font-feature-settings: normal;
+        margin: 0 auto;
+        position: relative;
+        background: linear-gradient(to bottom, #d5d1e6 0%, #d5d1e6 40%, #fff 80%, #fff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        transform: skewX(-12deg);
+    }
+}
