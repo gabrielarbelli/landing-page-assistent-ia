@@ -1,8 +1,6 @@
 import { Component, AfterViewInit, ElementRef, Renderer2, NgZone } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
-import { TypewriterDirective } from '../../shared/directives/typewriter.directive';
-import { AnimateColorFadeDirective } from '../../shared/directives/animate-color-fade.directive';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { FaqComponent } from '../../components/faq/faq.component';
 import { HeaderComponent } from '../../components/header/header.component';
@@ -23,7 +21,6 @@ import { ReasonBotcoreComponent } from '../../components/reason-botcore/reason-b
     imports: [
         CommonModule,
         AnimateOnScrollDirective,
-        TypewriterDirective,
         FooterComponent,
         FaqComponent,
         BotcoreComponent,
