@@ -14,6 +14,7 @@ import { HeadlineIaComponent } from '../../components/headline-ia/headline-ia.co
 import { MissionBlockComponent } from '../../components/mission-block/mission-block.component';
 import { TestimonialsComponent } from '../../components/testimonials/testimonials.component';
 import { ReasonBotcoreComponent } from '../../components/reason-botcore/reason-botcore.component';
+import { SuccessStoriesComponent } from '../../components/success-stories/success-stories.component';
 
 @Component({
     selector: 'app-home',
@@ -34,6 +35,7 @@ import { ReasonBotcoreComponent } from '../../components/reason-botcore/reason-b
         GrowthSystemComponent,
         TestimonialsComponent,
         ReasonBotcoreComponent,
+        SuccessStoriesComponent,
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
@@ -181,7 +183,6 @@ export class HomeComponent implements AfterViewInit {
         setTimeout(() => {
             this.setupTabs();
             this.setupMetrics();
-            this.setupAccordion();
         });
     }
 
@@ -228,27 +229,6 @@ export class HomeComponent implements AfterViewInit {
                         'linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02))',
                     );
                 });
-            });
-        });
-    }
-
-    private setupAccordion() {
-        // Quando um item do accordion é clicado, atualizamos a imagem correspondente
-        const accordionButtons = document.querySelectorAll('.accordion-button');
-        accordionButtons.forEach((button: Element, index) => {
-            button.addEventListener('click', () => {
-                // Identifica qual case foi clicado e atualiza a imagem
-                setTimeout(() => {
-                    if (!button.classList.contains('collapsed')) {
-                        if (index === 0) {
-                            this.activeStory = 'movitta';
-                        } else if (index === 1) {
-                            this.activeStory = 'mexicanissimo';
-                        } else if (index === 2) {
-                            this.activeStory = 'blacksheep';
-                        }
-                    }
-                }, 10);
             });
         });
     }
