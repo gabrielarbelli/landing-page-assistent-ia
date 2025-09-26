@@ -1,15 +1,17 @@
 .hero-animated {
     margin: 2rem 0;
-    width: 100vw;
+    width: 100%;
     min-height: 340px;
 
     &__container {
-        width: 100vw;
+        width: 100%;
         min-height: 340px;
         display: flex;
         align-items: stretch;
         justify-content: center;
         position: relative;
+        overflow-x: hidden;
+        overflow-x: visible;
     }
 
     &__image-bg {

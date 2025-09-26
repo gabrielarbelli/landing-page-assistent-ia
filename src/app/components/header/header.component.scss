@@ -114,7 +114,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        width: 300px;
+        width: 200px;
         height: 100vh;
         background-color: #ffffff;
         z-index: 1001;
@@ -237,9 +237,11 @@
 
 @media (max-width: 768px) {
     .topbar {
+        justify-self: flex-start;
+
         &__inner {
-            width: 95%;
-            padding: 13px 24px;
+            width: 100%;
+            padding: 13px 24px 13px 24px;
         }
 
         &__menu {
