@@ -1,9 +1,28 @@
-<!-- Header -->
-<app-header />
-
 <main>
-    <!-- Seção Principal -->
-    <app-assistent></app-assistent>
+    <!-- Video Background Container -->
+    <div class="video-background-container">
+        <!-- Video Background -->
+        <video
+            #videoPlayer
+            autoplay
+            muted
+            loop
+            playsinline
+            class="video-background"
+            (loadeddata)="onVideoLoaded()"
+        >
+            <source src="/images/video-bg.mp4" type="video/mp4" />
+        </video>
+
+        <!-- Content Overlay -->
+        <div class="video-content">
+            <!-- Header -->
+            <app-header />
+
+            <!-- Seção Principal -->
+            <app-assistent></app-assistent>
+        </div>
+    </div>
 
     <!-- Seção Benefícios -->
     <app-highlight></app-highlight>
@@ -187,7 +206,7 @@
                                     [animDelay]="100"
                                 />
                                 <img
-                                    src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
+                                    src="/images/logo1.png"
                                     alt="Interior da clínica"
                                     class="success-stories__image-thumb animate-fade-up position-absolute start-0 bottom-0 ms-3 mb-3 shadow-lg"
                                     style="z-index: 2"
@@ -204,7 +223,7 @@
                                     [animDelay]="100"
                                 />
                                 <img
-                                    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80"
+                                    src="/images/logo2.png"
                                     alt="Interior da clínica"
                                     class="success-stories__image-thumb animate-fade-up position-absolute start-0 bottom-0 ms-3 mb-3 shadow-lg"
                                     style="z-index: 2"
@@ -214,14 +233,14 @@
                         @if (activeStory === 'blacksheep') {
                             <div class="position-relative">
                                 <img
-                                    src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?auto=format&fit=crop&w=800&q=80"
+                                    src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt="Interior da clínica"
                                     class="w-100 h-100 object-fit-cover rounded-3"
                                     appAnimateOnScroll="anim-fade-in"
                                     [animDelay]="100"
                                 />
                                 <img
-                                    src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?auto=format&fit=crop&w=800&q=80"
+                                    src="/images/logo3.png"
                                     alt="Interior da clínica"
                                     class="success-stories__image-thumb animate-fade-up position-absolute start-0 bottom-0 ms-3 mb-3 shadow-lg"
                                     style="z-index: 2"

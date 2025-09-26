@@ -7,9 +7,7 @@
 
     &__accordion {
         width: 100%;
-        background: #fff;
         border-radius: 1.5rem;
-        box-shadow: 0 2px 24px rgba(0, 0, 0, 0.04);
         padding: 0 0.5rem;
     }
 
@@ -35,6 +33,7 @@
     &__icon {
         width: 36px;
         height: 36px;
+        min-width: 36px;
         border-radius: 50%;
         font-size: 2rem;
         display: flex;
@@ -42,7 +41,6 @@
         justify-content: center;
         background: linear-gradient(180deg, #4f1ad6 0%, #8059e3 100%);
         color: #fff;
-        margin-left: 1rem;
         box-shadow: 0 2px 8px rgba(162, 105, 255, 0.08);
         transition: background 0.9s;
         overflow: hidden;

@@ -1,5 +1,5 @@
 .assistent {
-    padding: clamp(56px, 8vw, 120px) 16px 48px;
+    padding: clamp(56px, 6vw, 120px) 16px 100px;
     position: relative;
 
     &__title {
@@ -29,12 +29,13 @@
         }
 
         .sparkle {
-            color: #9d6cfe;
+            color: #9300ff;
         }
     }
 
     &__subtitle {
-        color: #3d3d3d;
+        color: #000;
+        font-weight: bold;
         font-family: 'Manrope', 'Manrope Placeholder', sans-serif;
         font-size: 18px;
         margin-bottom: 1.875rem;
@@ -55,8 +56,6 @@
 
 @media (max-width: 768px) {
     .assistent {
-        padding: 40px 16px 32px;
-
         &__title .line {
             font-size: 28px;
         }
