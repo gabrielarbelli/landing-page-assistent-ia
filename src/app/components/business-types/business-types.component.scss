@@ -195,13 +195,7 @@
 
         .tab {
             width: 100%;
-            position: relative;
             height: 80px;
-            background: #1a1a1a;
-            border-radius: 12px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.3s ease;
 
             &:hover,
             &.active {
@@ -237,10 +231,9 @@
                 z-index: 2;
                 display: flex;
                 align-items: center;
-                padding: 1.5rem;
-                gap: 1.5rem;
+                padding: 1.65rem;
                 height: 80px;
-                color: white;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
 
                 .tab__number {
                     font-size: 1.5rem;
