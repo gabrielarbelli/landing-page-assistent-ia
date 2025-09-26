@@ -1,3 +1,42 @@
+/* Video Background Styles */
+.video-background-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2); // Overlay escuro para melhor contraste
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 200px; // Altura do gradiente, ajuste conforme necessário
+        background: linear-gradient(to bottom, transparent, #fff);
+        z-index: 1;
+        pointer-events: none;
+    }
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.video-content {
+    position: relative;
+    z-index: 1;
+    color: white; // Garante que o texto seja legível
+}
+
 /* Seção de Histórias de Sucesso */
 .success-stories {
     padding: 5rem 0;
