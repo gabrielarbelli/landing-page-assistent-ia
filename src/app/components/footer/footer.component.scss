@@ -36,3 +36,12 @@
         color: #6e6e6e;
     }
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer {
+        &__title {
+            font-size: 2.25rem;
+        }
+    }
+}
