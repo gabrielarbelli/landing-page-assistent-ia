@@ -211,7 +211,7 @@
     }
 
     .success-stories {
-        padding: 0;
+        padding: 3rem 0;
 
         &__title {
             font-size: 2rem;
@@ -221,23 +221,36 @@
         &__grid {
             grid-template-columns: 1fr;
             gap: 2rem;
-            margin-bottom: 0;
         }
 
         &__metrics {
-            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 0 1rem;
         }
 
         &__metric {
-            padding: 0.5rem 4px;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 153, 0, 0.2);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &--with-separator::before {
+                display: none;
+            }
 
             &__number {
-                font-size: 1.5rem;
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
             }
 
             &__label {
-                font-size: 0.75rem;
-                line-height: 1.2;
+                font-size: 0.875rem;
+                line-height: 1.4;
             }
         }
 
