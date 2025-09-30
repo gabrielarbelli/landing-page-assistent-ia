@@ -221,14 +221,13 @@
         &__grid {
             grid-template-columns: 1fr;
             gap: 2rem;
+            margin-bottom: 1rem;
         }
 
         &__metrics {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
-            margin-top: 3rem;
-            padding: 0 1rem;
+            margin-top: 0;
         }
 
         &__metric {
