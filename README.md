@@ -1,59 +1,104 @@
-# AssistenteIa
+# Landing Page Assistente IA
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+🔗 [Ver Demo na Vercel](https://landing-page-assistent-ia.vercel.app/)
 
-## Development server
+Uma landing page moderna e responsiva para um serviço de assistente virtual baseado em IA, desenvolvida com Angular 20.
 
-To start a local development server, run:
+## 🚀 Tecnologias
+
+- **Framework**: [Angular](https://angular.dev/) (v20.3.1)
+- **Estilização**: SCSS + Bootstrap
+- **Animações**: Animações personalizadas com CSS
+- **Responsividade**: Design mobile-first
+- **Performance**: Otimizada para carregamento rápido
+- **Acessibilidade**: Seguindo as melhores práticas WCAG
+
+## 🛠️ Recursos
+
+- ✨ Interface moderna e intuitiva
+- 📱 Totalmente responsiva
+- 🎯 Seções otimizadas para conversão
+- 🎨 Animações suaves e interativas
+- 💻 Exemplos de casos de uso
+- 📊 Métricas e resultados
+- 🤖 Demonstração de recursos de IA
+
+## 🚦 Começando
+
+### Pré-requisitos
+
+- Node.js (v18+)
+- npm ou yarn
+- Angular CLI
+
+### Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/gabrielarbelli/landing-page-assistent-ia.git
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Inicie o servidor de desenvolvimento:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Acesse `http://localhost:4200/` no seu navegador.
 
-## Code scaffolding
+## 🏗️ Estrutura do Projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+src/
+├── app/
+│   ├── components/       # Componentes reutilizáveis
+│   ├── pages/           # Páginas da aplicação
+│   └── shared/          # Recursos compartilhados
+├── assets/             # Recursos estáticos
+└── styles/            # Estilos globais
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📦 Build
+
+Para gerar uma build de produção:
 
 ```bash
-ng generate --help
+ng build --configuration production
 ```
 
-## Building
+Os arquivos serão gerados no diretório `dist/`.
 
-To build the project run:
+## 🧪 Testes
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Testes Unitários
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### Testes e2e
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📚 Documentação Adicional
 
-## Additional Resources
+- [Angular Documentation](https://angular.dev/)
+- [Angular CLI Documentation](https://angular.dev/tools/cli)
+- [Bootstrap Documentation](https://getbootstrap.com/docs/)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## ✨ Contribuindo
+
+Contribuições são sempre bem-vindas! Por favor, leia as [diretrizes de contribuição](CONTRIBUTING.md) primeiro.
